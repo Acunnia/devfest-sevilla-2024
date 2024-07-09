@@ -45,6 +45,10 @@ export const NAVIGATION = [
     route: 'https://sessionize.com/devfest-sevilla-2024/'
   },
   {
+    name: 'Voluntarios',
+    route: 'https://forms.gle/AxHqWYRAZw6Xaruj9'
+  },
+  {
     name: 'Equipo',
     route: '/team'
   },
