@@ -54,7 +54,7 @@
   --accents-7: #333333;
   --accents-8: #111111;
 
-  --gray: #252729;
+  --gray: #303a45;
   --secondary-color: #8a8f98;
   --sidebar: #0e0e10;
   --brand: #4285f4;
@@ -73,7 +73,8 @@
   --web-topic-color: var(--brand-green);
   --web-topic-color-accent: var(--brand);
 
-  --foreground: #fff;
+  --foreground: #ffffffff;
+  --foreground-secondary: #ffffff66;
 
   --header-height: 72px;
   --video-list-height: 150px;
@@ -120,6 +121,7 @@ html,
 body {
   color: var(--foreground);
   background-color: var(--accents-8);
+  z-index: -100;
 }
 
 ::selection {

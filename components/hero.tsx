@@ -19,6 +19,7 @@ import styleUtils from './utils.module.css';
 import styles from './hero.module.css';
 import { SITE_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
 import IconLogo from './icons/icon-logo';
+import { GradientBackground } from './GradientBackground';
 
 export default function Hero() {
   return (
@@ -62,6 +63,14 @@ export default function Hero() {
           <a className='block text-inherit' href='https://maps.app.goo.gl/Yas39dwhX159U1yc9'>Metropol Parasol, Sevilla, España</a>
         </p>
       </div>
+      <GradientBackground
+        variant="large"
+        className="fixed top-20 opacity-40 dark:opacity-60"
+      />
+      <GradientBackground
+        variant="small"
+        className="fixed bottom-0 opacity-30 dark:opacity-10"
+      />
     </div>
   );
 }
