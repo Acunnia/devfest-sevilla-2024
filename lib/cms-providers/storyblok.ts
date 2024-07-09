@@ -241,6 +241,5 @@ export async function getAllTeamMembers(): Promise<TeamMember[]> {
   `);
 
   const transformedData = transformResponse(data.TeamItems.items);
-  console.log(transformedData);
   return transformedData;
 }

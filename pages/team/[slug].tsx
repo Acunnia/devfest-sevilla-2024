@@ -17,11 +17,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 
 import Page from '@components/page';
-import SpeakerSection from '@components/speaker-section';
 import Layout from '@components/layout';
 
-import { getAllSpeakers } from '@lib/cms-api';
-import { Speaker, TeamMember } from '@lib/types';
+import { TeamMember } from '@lib/types';
 import { META_DESCRIPTION, SITE_NAME } from '@lib/constants';
 import TeamMemberSection from '@components/team-section';
 import { getAllTeamMembers } from '@lib/cms-providers/storyblok';
