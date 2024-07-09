@@ -99,9 +99,7 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
             url
           }
           company
-          image {
-            url: filename
-          }
+          image 
           talk {
             content
           }
@@ -171,12 +169,8 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
           youtubeSlug
           tier
           links
-          cardImage {
-            url: filename
-          }
-          logo {
-            url: filename
-          }
+          cardImage
+          logo
         }
       }
     }
