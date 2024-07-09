@@ -53,6 +53,7 @@
 
 .header-logos {
   display: flex;
+  max-width: 200px;
   align-items: center;
   margin: var(--space-2x) var(--space-4x);
 }
@@ -113,6 +114,6 @@
 
 .logo {
   display: flex;
-  width: auto;
+  width: 40px;
   flex-grow: 1;
 }

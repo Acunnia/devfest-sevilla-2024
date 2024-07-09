@@ -44,7 +44,7 @@ export default function Team({ teamMembers }: Props) {
       <Layout>
         <Header hero="Equipo" description="Estos somos nosotros, los que hacemos posible este evento 👋😉" />
         <div className='flex justify-start mx-8 gap-4 flex-wrap mt-4'>
-          <LinkButton className={cn(styles.button_small, styles.register,) + " px-16"} href="mailto:alvaro@gdgsevilla.org">
+          <LinkButton className={cn(styles.button_small, styles.register,) + " px-16"} href="mailto:alvaro@gdgsevilla.com">
             Escríbenos por email
           </LinkButton>
         </div>
