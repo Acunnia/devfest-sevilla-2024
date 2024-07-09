@@ -54,7 +54,7 @@ export default function Hero() {
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
-          <strong>12:00 HS</strong>
+          <strong>10:00 HS</strong>
         </p>
       </div>
       <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.location)}>
