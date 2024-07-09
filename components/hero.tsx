@@ -17,7 +17,8 @@
 import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './hero.module.css';
-import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
+import { SITE_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
+import IconLogo from './icons/icon-logo';
 
 export default function Hero() {
   return (
@@ -32,17 +33,20 @@ export default function Hero() {
       >
         {SITE_DESCRIPTION}
       </h2>
+      <div className={cn(styleUtils.appear,
+        styleUtils['appear-second'],
+        styles.logo)}>
+        <IconLogo />
+      </div>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
-        Welcome to the
-        <br className={styleUtils['show-on-desktop']} /> {BRAND_NAME} conference
+        <br className={styleUtils['show-on-desktop']} /> {SITE_NAME}
       </h1>
       <h2
         className={cn(
           styleUtils.appear,
           styleUtils['appear-third'],
-          styleUtils['show-on-tablet'],
           styles.description
-        )}
+        ) + ' hidden md:block'}
       >
         {SITE_DESCRIPTION}
       </h2>
@@ -50,7 +54,12 @@ export default function Hero() {
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
-          <strong>Online</strong>
+          <strong>12:00 HS</strong>
+        </p>
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.location)}>
+        <p className='text-center px-8 normal-case'>
+          <a className='block text-inherit' href='https://maps.app.goo.gl/Yas39dwhX159U1yc9'>Metropol Parasol, Sevilla, España</a>
         </p>
       </div>
     </div>

@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://demo.vercel.events';
+export const SITE_URL = 'https://www.gdgsevilla.com'; //TODO: Update this URL
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
-export const TWITTER_USER_NAME = 'vercel';
-export const BRAND_NAME = 'ACME';
-export const SITE_NAME_MULTILINE = ['ACME', 'Conf'];
-export const SITE_NAME = 'ACME Conf';
+export const TWITTER_USER_NAME = 'GDGSevilla';
+export const BRAND_NAME = 'GDG Sevilla';
+export const SITE_NAME_MULTILINE = ['DevFest', 'Sevilla'];
+export const SITE_NAME = 'DevFest Sevilla 2024';
 export const META_DESCRIPTION =
   'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
 export const SITE_DESCRIPTION =
-  'An interactive online experience by the community, free for everyone.';
-export const DATE = '01 January 2022';
-export const SHORT_DATE = 'Jan 1 - 9:00am PST';
-export const FULL_DATE = 'Jan 1st 9am Pacific Time (GMT-7)';
+  'Tecnología, Comunidad, Diversión.';
+export const DATE = '24 Noviembre 2024';
+export const SHORT_DATE = 'Nov 24 - 10:00am PST';
+export const FULL_DATE = 'Nov 24st 10am Pacific Time (GMT+1)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 
@@ -36,18 +36,18 @@ export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;
 export const COPYRIGHT_HOLDER = process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
 
 export const CODE_OF_CONDUCT =
-  'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';
+  'https://developers.google.com/events/gdd-europe/code-of-conduct?hl=es-419';
 export const REPO = 'https://github.com/vercel/virtual-event-starter-kit';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Live Stage',
-    route: '/stage/a'
+    name: 'Call for Speakers',
+    route: 'https://sessionize.com/devfest-sevilla-2024/'
   },
   {
-    name: 'Vercel Stage',
-    route: '/stage/c'
-  },
+    name: 'Equipo',
+    route: '/team'
+  }/*,
   {
     name: '100ms Stage',
     route: '/stage/m'
@@ -66,8 +66,8 @@ export const NAVIGATION = [
   },
   {
     name: 'Jobs',
-    route: '/jobs'
-  }
+    route: '/'
+  }*/
 ];
 
 export type TicketGenerationState = 'default' | 'loading';

@@ -32,6 +32,19 @@ export type Speaker = {
   imageSquare: Image;
 };
 
+export type TeamMember = {
+  name: string;
+  slug: string;
+  role: string;
+  currentAffiliation: string;
+  roleAtCurrentAffiliation: string;
+  bio: string;
+  email: string;
+  linkedin: string;
+  github: string;
+  image: string;
+};
+
 export type Stage = {
   name: string;
   slug: string;
@@ -97,11 +110,11 @@ export type ConfUser = {
 
 export type GitHubOAuthData =
   | {
-      type: 'token';
-      token: string;
-    }
+    type: 'token';
+    token: string;
+  }
   | {
-      type: 'user';
-      name: string;
-      login: string;
-    };
+    type: 'user';
+    name: string;
+    login: string;
+  };

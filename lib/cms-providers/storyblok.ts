@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, TeamMember } from '@lib/types';
 
 const API_URL = 'https://gapi.storyblok.com/v1/api';
 const API_TOKEN = process.env.STORYBLOK_PREVIEW_TOKEN;
@@ -27,7 +27,12 @@ const API_TOKEN = process.env.STORYBLOK_PREVIEW_TOKEN;
  * starter so as not to have to modify the component files.
  */
 function transformResponse(response: any[], _speakers?: any) {
-  const content = response.map((r: any) => (r.content ? r.content : r));
+  const content = response.map((r: any) => {
+    const newCont = r.content ?? r;
+    newCont.slug = r.slug ?? '';
+    newCont.name = r.name ?? '';
+    return newCont;
+  });
   content.map((item: any) => {
     Object.keys(item).map(key => {
       // assign the urls directly if not an image
@@ -205,5 +210,37 @@ export async function getAllJobs(): Promise<Job[]> {
   `);
 
   const transformedData = transformResponse(data.JobItems.items);
+  return transformedData;
+}
+
+export async function getAllTeamMembers(): Promise<TeamMember[]> {
+  const data = await fetchCmsAPI(`
+    {
+      TeamItems(per_page: 10) {
+        items {
+          name
+          slug
+          content {
+            role
+            currentAffiliation
+            roleAtCurrentAffiliation
+            linkedin {
+              url
+            }
+            github {
+              url
+            }
+            bio
+            email
+            image
+          }
+        }
+      }
+    }
+
+  `);
+
+  const transformedData = transformResponse(data.TeamItems.items);
+  console.log(transformedData);
   return transformedData;
 }
