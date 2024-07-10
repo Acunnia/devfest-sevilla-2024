@@ -15,6 +15,7 @@
  */
 
 .card {
+  height: 300px;
   border-radius: var(--space-2x);
   background: #111111;
   display: flex;
@@ -43,6 +44,7 @@
   .card {
     margin-bottom: 0;
   }
+
   .grid {
     display: grid;
     grid-gap: 24px;

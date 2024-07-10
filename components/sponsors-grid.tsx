@@ -21,6 +21,7 @@ import { Sponsor } from '@lib/types';
 import styles from './sponsors-grid.module.css';
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
+
   return (
     <Link
       key={sponsor.name}
