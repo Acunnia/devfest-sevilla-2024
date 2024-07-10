@@ -162,12 +162,8 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
       youtubeSlug: company.fields.youtubeSlug,
       tier: company.fields.tier,
       description: company.fields.description,
-      cardImage: {
-        url: `${company.fields.cardImage.url}`
-      },
-      logo: {
-        url: `${company.fields.logo.url}`
-      },
+      cardImage: company.fields.cardImage,
+      logo: company.fields.logo,
       links
     });
   });
@@ -220,9 +216,8 @@ const getSyncClient = (context: any) => {
     return null;
   }
 
-  let cachePath = `node_modules/@agility/content-sync/cache/${agilityConfig.guid}/${
-    isPreview ? 'preview' : 'live'
-  }`;
+  let cachePath = `node_modules/@agility/content-sync/cache/${agilityConfig.guid}/${isPreview ? 'preview' : 'live'
+    }`;
 
   if (!isDevelopmentMode) {
     cachePath = `/tmp/agilitycache/${agilityConfig.guid}/${isPreview ? 'preview' : 'live'}`;
