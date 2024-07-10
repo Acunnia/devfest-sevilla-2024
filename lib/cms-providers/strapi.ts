@@ -200,14 +200,6 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
 
   return data.sponsors.map((sponsor: Sponsor) => ({
     ...sponsor,
-    cardImage: {
-      ...sponsor.cardImage,
-      ...serializeImage(sponsor.cardImage)
-    },
-    logo: {
-      ...sponsor.cardImage,
-      ...serializeImage(sponsor.cardImage)
-    }
   }));
 }
 
