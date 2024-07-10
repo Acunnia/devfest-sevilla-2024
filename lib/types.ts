@@ -79,8 +79,8 @@ export type Sponsor = {
   links: SponsorLink[];
   discord: string;
   tier: string;
-  cardImage: Image;
-  logo: Image;
+  cardImage: string;
+  logo: string;
   youtubeSlug: string;
 };
 

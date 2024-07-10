@@ -35,7 +35,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
       <div className={styles.imageWrapper}>
         <Image
           alt={sponsor.name}
-          src={sponsor.cardImage.url}
+          src={sponsor.cardImage}
           className={cn(styles.image, {
             [styles.silver]: sponsor.tier === 'silver'
           })}

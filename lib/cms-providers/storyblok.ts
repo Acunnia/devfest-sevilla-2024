@@ -152,10 +152,10 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
   {
     CompanyItems(per_page: 100) {
       items {
+        name
+        slug
         content {
-          name
           description
-          slug
           website {
             url
           }

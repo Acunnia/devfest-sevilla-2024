@@ -53,6 +53,10 @@ export const NAVIGATION = [
     route: '/team'
   },
   {
+    name: 'Partners',
+    route: '/expo'
+  },
+  {
     name: 'Edición 2019',
     route: 'https://devfest19.gdgsevilla.com'
   },
@@ -68,10 +72,6 @@ export const NAVIGATION = [
   {
     name: 'Speakers',
     route: '/speakers'
-  },
-  {
-    name: 'Expo',
-    route: '/expo'
   },
   {
     name: 'Jobs',
