@@ -64,12 +64,20 @@ type Props = {
 
 export default function SponsorsGrid({ sponsors }: Props) {
   const silverSponsors = sponsors.filter(s => s.tier === 'silver');
-  const otherSponsors = sponsors.filter(s => s.tier !== 'silver');
+  const diamondSponsors = sponsors.filter(s => s.tier === 'diamond')
+  const otherSponsors = sponsors.filter(s => s.tier !== 'silver' && s.tier !== 'diamond');
 
   return (
     <>
       <div className={styles.grid}>
+        <h2 className={styles.textTier}>Organiza</h2>
         {otherSponsors.map(sponsor => (
+          <SponsorCard key={sponsor.name} sponsor={sponsor} />
+        ))}
+      </div>
+      <div className={styles.grid}>
+        <h2 className={styles.textTier}>Patrocinadores Diamante</h2>
+        {diamondSponsors.map(sponsor => (
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>
