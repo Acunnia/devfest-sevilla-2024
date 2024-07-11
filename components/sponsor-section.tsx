@@ -45,16 +45,18 @@ export default function SponsorSection({ sponsor }: Props) {
         Back to expo
       </Link>
       <div className={styles.layout}>
-        <iframe
-          className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
-          allow="picture-in-picture"
-          allowFullScreen
-          frameBorder="0"
-          height="100%"
-          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
-          title={sponsor.name}
-          width="100%"
-        />
+        {sponsor.tier !== 'silver' && (
+          <iframe
+            className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
+            allow="picture-in-picture"
+            allowFullScreen
+            frameBorder="0"
+            height="100%"
+            src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
+            title={sponsor.name}
+            width="100%"
+          />
+        )}
         <div className={styles.container}>
           <div className={styles['name-and-logo']}>
             <Image
@@ -79,15 +81,17 @@ export default function SponsorSection({ sponsor }: Props) {
             >
               {sponsor.callToAction}
             </a>
-            <a
-              href={sponsor.discord}
-              target="_blank"
-              rel="noopener noreferrer"
-              type="button"
-              className={cn(styles.button, styles['button-link'])}
-            >
-              Chat on Discord
-            </a>
+            {sponsor.discord !== ' ' && (
+              <a
+                href={sponsor.discord}
+                target="_blank"
+                rel="noopener noreferrer"
+                type="button"
+                className={cn(styles.button, styles['button-link'])}
+              >
+                Chat on Discord
+              </a>
+            )}
           </div>
           <div className={styles.resources}>
             <h2 className={styles.heading}>Resources</h2>

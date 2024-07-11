@@ -82,6 +82,7 @@ export default function SponsorsGrid({ sponsors }: Props) {
         ))}
       </div>
       <div className={styles.grid}>
+        <h2 className={styles.textTier}>Patrocinadores Plata</h2>
         {silverSponsors.map(sponsor => (
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
