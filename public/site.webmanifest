@@ -1,7 +1,7 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "short_name": "Virtual Event Starter Kit",
-  "description": "Virtual Event Starter Kit -> https://demo.vercel.events",
+  "name": "Devfest Sevilla 2024",
+  "short_name": "Devfest Sevilla 2024",
+  "description": "Únete a nuestro evento de divulgación tecnológica para aprender en comunidad de tecnologías como React, Web, Angular, Android, AI, ChatGPT, y más",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",
