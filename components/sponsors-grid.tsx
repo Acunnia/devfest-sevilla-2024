@@ -46,7 +46,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
           height={500}
         />
       </div>
-      {sponsor.tier !== 'silver' && (
+      {sponsor.tier !== 'colabora' && (
         <div className={styles.cardBody}>
           <div>
             <h2 className={styles.name}>{sponsor.name}</h2>
