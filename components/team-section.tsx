@@ -39,6 +39,7 @@ type Props = {
 };
 
 export default function TeamMemberSection({ teamMember: teamMember }: Props) {
+  console.log(teamMember);
   return (
     <>
       <Link href="/team" className={styles.backlink}>
@@ -96,7 +97,7 @@ export default function TeamMemberSection({ teamMember: teamMember }: Props) {
                 <LinkedInIcon />
               </span>
             )}
-            {teamMember.github ? (
+            {teamMember.github && teamMember.github !== ' ' ? (
               <a
                 aria-label="GitHub"
                 className={styles.githubIcon}
@@ -104,12 +105,10 @@ export default function TeamMemberSection({ teamMember: teamMember }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GithubIcon color="#D8D8D8" size={24} />
+                <TwitterIcon />
               </a>
             ) : (
-              <span className={cn(styles.githubIcon, styles.disabled)}>
-                <GithubIcon color="#D8D8D8" size={24} />
-              </span>
+              <></>
             )}
             {teamMember.email ? (
               <a
