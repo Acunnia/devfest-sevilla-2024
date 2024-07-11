@@ -21,7 +21,7 @@ export const BRAND_NAME = 'GDG Sevilla';
 export const SITE_NAME_MULTILINE = ['DevFest', 'Sevilla'];
 export const SITE_NAME = 'DevFest Sevilla 2024';
 export const META_DESCRIPTION =
-  'Devfest Sevilla 2024. Aprende de expertos de Google, participa en talleres interactivos y conecta con otros entusiastas de la tecnología. ¡No te pierdas esta oportunidad de innovar y divertirte en comunidad!';
+  'DEVFEST SEVILLA 2024 - GDG SEVILLA. GDGSevilla presenta Devfest24 Sevilla. Aprende de expertos de Google, participa en talleres interactivos y conecta con otros entusiastas de la tecnología. ¡No te pierdas esta oportunidad de innovar y divertirte en comunidad!';
 export const SITE_DESCRIPTION =
   'Tecnología, Comunidad, Diversión.';
 export const DATE = '24 Noviembre 2024';
