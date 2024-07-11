@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://devfest24.gdgsevilla.com/
+
+# Sitemaps
+Sitemap: https://devfest24.gdgsevilla.com/sitemap.xml
