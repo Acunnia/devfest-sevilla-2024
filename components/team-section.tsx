@@ -39,7 +39,6 @@ type Props = {
 };
 
 export default function TeamMemberSection({ teamMember: teamMember }: Props) {
-  console.log(teamMember);
   return (
     <>
       <Link href="/team" className={styles.backlink}>

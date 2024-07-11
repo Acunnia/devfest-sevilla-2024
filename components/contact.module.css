@@ -39,6 +39,15 @@
   gap: 12px;
 }
 
+.button.disabled {
+  background: grey;
+  /* Cambia esto al tono de gris que prefieras */
+  border: 1px solid grey;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.75;
+}
+
 .button {
   height: 56px;
   margin-top: var(--space-4x);

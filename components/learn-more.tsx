@@ -24,6 +24,12 @@ import LinkButton from './hms/LinkButton';
 export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact, styles.btn_container)}>
+      <LinkButton
+        className={cn(styles.button, styles.register, 'px-12', 'mb-2', styles.disabled)}
+        href=''
+      >
+        Entradas próximamente
+      </LinkButton>
       <LinkButton className={cn(styles.button, styles.register,) + " px-12 mb-2"} href='https://sessionize.com/devfest-sevilla-2024/'>
         Call for Speakers
       </LinkButton>
