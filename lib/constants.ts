@@ -21,7 +21,7 @@ export const BRAND_NAME = 'GDG Sevilla';
 export const SITE_NAME_MULTILINE = ['DevFest', 'Sevilla'];
 export const SITE_NAME = 'DevFest Sevilla 2024';
 export const META_DESCRIPTION =
-  'DEVFEST SEVILLA 2024 - GDG SEVILLA. GDGSevilla presenta Devfest24 Sevilla. Aprende de expertos de Google, participa en talleres interactivos y conecta con otros entusiastas de la tecnología. ¡No te pierdas esta oportunidad de innovar y divertirte en comunidad!';
+  'Devfest Sevilla 2024 - GDG Sevilla. 24 de noviembre. Aprende de expertos de Google, participa en talleres y conecta con entusiastas de la tecnología. ¡No te lo pierdas!';
 export const SITE_DESCRIPTION =
   'Tecnología, Comunidad, Diversión.';
 export const DATE = '24 Noviembre 2024';
@@ -32,7 +32,7 @@ export const COOKIE = 'user-id';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
-export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;
+export const LEGAL_URL = "https://devfest24.gdgsevilla.com/legal";
 export const COPYRIGHT_HOLDER = process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
 
 export const CODE_OF_CONDUCT =
