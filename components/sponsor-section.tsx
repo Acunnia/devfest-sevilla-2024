@@ -45,7 +45,7 @@ export default function SponsorSection({ sponsor }: Props) {
         Back to expo
       </Link>
       <div className={styles.layout}>
-        {sponsor.tier !== 'silver' && (
+        {(sponsor.tier === 'diamond' || sponsor.tier === 'organization') ? (
           <iframe
             className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
             allow="picture-in-picture"
@@ -56,6 +56,17 @@ export default function SponsorSection({ sponsor }: Props) {
             title={sponsor.name}
             width="100%"
           />
+        ) : (
+          sponsor.image !== ' ' && (
+            <div className={styles.imageContainer}>
+              <img
+                className={cn(styles.imageEnhanced)}
+                src={sponsor.image}
+                alt={sponsor.name}
+                title={sponsor.name}
+              />
+            </div>
+          )
         )}
         <div className={styles.container}>
           <div className={styles['name-and-logo']}>
@@ -70,7 +81,7 @@ export default function SponsorSection({ sponsor }: Props) {
             />
             <h1 className={styles.name}>{sponsor.name}</h1>
           </div>
-          <p className={styles.description}>{sponsor.description}</p>
+          <p className={styles.description}>{sponsor.info}</p>
           <div className={styles['sponsor-details']}>
             <a
               href={sponsor.callToActionLink}

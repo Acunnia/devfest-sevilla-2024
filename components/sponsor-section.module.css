@@ -14,6 +14,35 @@
  * limitations under the License.
  */
 
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imageEnhanced {
+  width: 100%;
+  /* Ajusta esto según sea necesario */
+  max-width: 600px;
+  /* Para limitar el tamaño máximo */
+  height: auto;
+  /* Para mantener la proporción de la imagen */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Transición suave */
+}
+
+.imageEnhanced:hover {
+  transform: scale(1.05);
+  /* Aumenta ligeramente el tamaño al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Sombra más grande al pasar el cursor */
+}
+
 .video {
   margin: 24px 0;
   height: 100%;
@@ -49,6 +78,7 @@
     display: flex;
     flex-direction: column;
     min-width: 600px;
+    max-width: 40%;
   }
 }
 

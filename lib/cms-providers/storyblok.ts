@@ -171,6 +171,8 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
           links
           cardImage
           logo
+          info
+          image
         }
       }
     }

@@ -82,6 +82,8 @@ export type Sponsor = {
   cardImage: string;
   logo: string;
   youtubeSlug: string;
+  info: string;
+  image: string;
 };
 
 export type SponsorLink = {
