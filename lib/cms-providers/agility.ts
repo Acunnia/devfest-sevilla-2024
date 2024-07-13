@@ -156,6 +156,8 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
       name: company.fields.name,
       discord: company.fields.discord,
       slug: company.fields.slug,
+      info: company.fields.info,
+      image: company.field.image,
       website: company.fields.website,
       callToAction: company.fields.callToAction.text,
       callToActionLink: company.fields.callToAction.href,
