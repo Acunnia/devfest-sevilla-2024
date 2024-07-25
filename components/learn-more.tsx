@@ -25,10 +25,10 @@ export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact, styles.btn_container)}>
       <LinkButton
-        className={cn(styles.button, styles.register, 'px-12', 'mb-2', styles.disabled)}
-        href=''
+        className={cn(styles.button, styles.register, 'px-12', 'mb-2')}
+        href='https://entradium.com/events/devfest-sevilla-2024'
       >
-        Entradas próximamente
+        Compra tus entradas
       </LinkButton>
       <LinkButton className={cn(styles.button, styles.register,) + " px-12 mb-2"} href='https://sessionize.com/devfest-sevilla-2024/'>
         Call for Speakers
