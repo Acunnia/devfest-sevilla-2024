@@ -42,7 +42,7 @@ export default function SponsorSection({ sponsor }: Props) {
         >
           <path d="M15 18l-6-6 6-6" />
         </svg>
-        Back to expo
+        Volver a patrocinadores
       </Link>
       <div className={styles.layout}>
         {(sponsor.tier === 'diamond' || sponsor.tier === 'organization') ? (
