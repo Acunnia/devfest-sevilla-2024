@@ -66,7 +66,7 @@ export default function TalkCard({ talk: { title, speaker, start, end }, showTim
                     loading="lazy"
                     alt={s.name}
                     className={styles.avatar}
-                    src={s.image.url}
+                    src={s.image}
                     title={s.name}
                     width={24}
                     height={24}

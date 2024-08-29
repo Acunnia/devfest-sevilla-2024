@@ -28,8 +28,8 @@ export type Speaker = {
   github: string;
   company: string;
   talk: Talk;
-  image: Image;
-  imageSquare: Image;
+  image: string;
+  imageSquare: string;
 };
 
 export type TeamMember = {

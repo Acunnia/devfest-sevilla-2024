@@ -26,7 +26,7 @@ export const SITE_DESCRIPTION =
   'Tecnología, Comunidad, Diversión.';
 export const DATE = '24 Noviembre 2024';
 export const SHORT_DATE = 'Nov 24 - 10:00am PST';
-export const FULL_DATE = 'Nov 24st 10am Pacific Time (GMT+1)';
+export const FULL_DATE = 'Nov 24th 10am Pacific Time (GMT+1)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 

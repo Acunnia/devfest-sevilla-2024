@@ -69,12 +69,8 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
       twitter: speaker.fields.twitter,
       github: speaker.fields.github,
       company: speaker.fields.company.fields.name,
-      image: {
-        url: `${speaker.fields.image.url}?w=300&h=400&c=1`
-      },
-      imageSquare: {
-        url: `${speaker.fields.image.url}?w=192&h=192&c=1`
-      },
+      image: speaker.fields.image,
+      imageSquare: speaker.fields.image,
       talk
     });
   });

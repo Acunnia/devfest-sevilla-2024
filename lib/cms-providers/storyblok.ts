@@ -99,7 +99,7 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
             url
           }
           company
-          image 
+          image
           talk {
             content
           }
@@ -111,7 +111,7 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
 
   const responseData = data.SpeakerItems.items.map((s: any) => {
     const speaker = s.content;
-    speaker.talk = speaker.talk.content;
+    speaker.talk = speaker.talk[0].content;
     speaker.uuid = s.uuid;
     return speaker;
   });

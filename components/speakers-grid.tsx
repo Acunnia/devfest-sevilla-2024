@@ -37,13 +37,13 @@ export default function SpeakersGrid({ speakers }: Props) {
           <div className={styles.imageWrapper}>
             <Image
               alt={speaker.name}
-              src={speaker.image.url}
+              src={speaker.image}
               className={styles.image}
               loading="lazy"
               quality="50"
               title={speaker.name}
-              placeholder={speaker.image.blurDataURL ? 'blur' : 'empty'}
-              blurDataURL={speaker.image.blurDataURL}
+              placeholder={speaker.image ? 'blur' : 'empty'}
+              blurDataURL={speaker.image}
               width={300}
               height={300}
             />

@@ -31,14 +31,14 @@ type Props = {
 
 export default function SchedulePage({ allStages }: Props) {
   const meta = {
-    title: 'Schedule - Virtual Event Starter Kit',
-    description: META_DESCRIPTION
+    title: 'Programa - DevFest Sevilla 2024',
+    description: 'Estas son las charlas que tendrán lugar en el DevFest Sevilla 2024. ¡No te las pierdas!'
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Schedule" description={meta.description} />
+        <Header hero="Programa" description={meta.description} />
         <Schedule allStages={allStages} />
       </Layout>
     </Page>
