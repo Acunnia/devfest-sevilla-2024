@@ -71,13 +71,10 @@ function serializeImage(image: Image) {
  */
 function serializeSpeaker(speaker: Speaker) {
   return {
-    ...speaker,
-    image: {
-      ...speaker.image,
-      ...serializeImage(speaker.image)
-    }
-  };
-}
+    ...speaker
+  }
+};
+
 
 export async function getAllSpeakers(): Promise<Speaker[]> {
   const data = await fetchCmsAPI(`
