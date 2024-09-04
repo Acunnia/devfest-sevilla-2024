@@ -30,7 +30,7 @@ type Props = {
 
 export default function SessionPage({ session }: Props) {
   const meta = {
-    title: 'Demo - Virtual Event Starter Kit',
+    title: `${session.title} - DevFest Sevilla 2024}`,
     description: META_DESCRIPTION
   };
 
