@@ -13,13 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, Talk } from '@lib/types';
 
-import * as strapiApi from './cms-providers/strapi';
-import * as agilityApi from './cms-providers/agility';
-import * as datoCmsApi from './cms-providers/dato';
-import * as contentfulApi from './cms-providers/contentful';
-import * as prismicApi from './cms-providers/prismic';
 import * as storyblokApi from './cms-providers/storyblok';
 
 let cmsApi: {
@@ -27,30 +22,18 @@ let cmsApi: {
   getAllStages: () => Promise<Stage[]>;
   getAllSponsors: () => Promise<Sponsor[]>;
   getAllJobs: () => Promise<Job[]>;
+  getAllTalks: () => Promise<Talk[]>;
 };
 
-if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
-  cmsApi = datoCmsApi;
-} else if (process.env.CONTENTFUL_ACCESS_TOKEN && process.env.CONTENTFUL_SPACE_ID) {
-  cmsApi = contentfulApi;
-} else if (process.env.STORYBLOK_PREVIEW_TOKEN) {
+if (process.env.STORYBLOK_PREVIEW_TOKEN) {
   cmsApi = storyblokApi;
-} else if (process.env.PRISMIC_REPO_ID) {
-  cmsApi = prismicApi;
-} else if (
-  process.env.AGILITY_GUID &&
-  process.env.AGILITY_API_FETCH_KEY &&
-  process.env.AGILITY_API_PREVIEW_KEY
-) {
-  cmsApi = agilityApi;
-} else if (process.env.STRAPI_API_URL) {
-  cmsApi = strapiApi;
 } else {
   cmsApi = {
     getAllSpeakers: () => Promise.resolve([]),
     getAllStages: () => Promise.resolve([]),
     getAllSponsors: () => Promise.resolve([]),
-    getAllJobs: () => Promise.resolve([])
+    getAllJobs: () => Promise.resolve([]),
+    getAllTalks: () => Promise.resolve([])
   };
 }
 
@@ -68,4 +51,8 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
 
 export async function getAllJobs(): Promise<Job[]> {
   return cmsApi.getAllJobs();
+}
+
+export async function getAllTalks(): Promise<Talk[]> {
+  return cmsApi.getAllTalks();
 }

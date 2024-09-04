@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker, TeamMember } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, TeamMember, Talk } from '@lib/types';
 
 const API_URL = 'https://gapi.storyblok.com/v1/api';
 const API_TOKEN = process.env.STORYBLOK_PREVIEW_TOKEN;
@@ -114,6 +114,35 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
     speaker.talk = speaker.talk[0].content;
     speaker.uuid = s.uuid;
     return speaker;
+  });
+  const transformedData = transformResponse(responseData);
+  return transformedData;
+}
+
+export async function getAllTalks(): Promise<Talk[]> {
+  const data = await fetchCmsAPI(`
+    {
+      TalkItems(per_page: 100) {
+        items {
+          slug
+          content {
+            title
+            start
+            end
+            description
+            speaker {
+              content
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const responseData = data.TalkItems.items.map((s: any) => {
+    const session = s;
+    session.content.speaker[0] = s.content.speaker[0].content;
+    return session;
   });
   const transformedData = transformResponse(responseData);
   return transformedData;

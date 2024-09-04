@@ -58,6 +58,7 @@ export type Stage = {
 };
 
 export type Talk = {
+  slug: string;
   title: string;
   description: string;
   start: string;
