@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://devfest24.gdgsevilla.com/'; //TODO: Update this URL
+export const SITE_URL = 'https://devfest24.gdgsevilla.com'; //TODO: Update this URL
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'GDGSevilla';
 export const BRAND_NAME = 'GDG Sevilla';
