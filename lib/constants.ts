@@ -21,7 +21,7 @@ export const BRAND_NAME = 'GDG Sevilla';
 export const SITE_NAME_MULTILINE = ['DevFest', 'Sevilla'];
 export const SITE_NAME = 'DevFest Sevilla 2024';
 export const META_DESCRIPTION =
-  'DevFest Sevilla  es una conferencia tecnológica organizada por Google Developers Group Sevilla. Los GDG son una red local de grupos sin ánimo de lucro ofrecen charlas, demostraciones prácticas, talleres y laboratorios de código sobre las últimas tecnologías de Google. En 2022, se celebraron más de 550 DevFests, que ayudaron a más de 320.000 desarrolladores. DevFest es el principal evento local para que los desarrolladores conozcan las últimas tecnologías de Google de la mano de Googlers, Google Developer Experts y ponentes del sector.';
+  'DevFest Sevilla es una conferencia tecnológica organizada por Google Developers Group Sevilla. Ofrecemos charlas, talleres y laboratorios sobre las últimas tecnologías de Google. Únete a nosotros para aprender y conectar con expertos del sector.';
 export const SITE_DESCRIPTION =
   'Tecnología, Comunidad, Diversión.';
 export const DATE = '24 Noviembre 2024';
