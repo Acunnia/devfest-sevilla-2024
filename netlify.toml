@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "http://devfest24.gdgsevilla.com/*"
+  to = "https://devfest24.gdgsevilla.com/:splat"
+  status = 301
+  force = true
