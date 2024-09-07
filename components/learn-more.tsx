@@ -17,7 +17,6 @@
 import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './contact.module.css';
-import { REPO } from '@lib/constants';
 import LinkButton from './hms/LinkButton';
 
 
@@ -30,8 +29,8 @@ export default function LearnMore() {
       >
         Compra tus entradas
       </LinkButton>
-      <LinkButton className={cn(styles.button, styles.register,) + " px-12 mb-2"} href='https://sessionize.com/devfest-sevilla-2024/'>
-        Call for Speakers
+      <LinkButton className={cn(styles.speakers) + " px-12 mb-2"} href={`/speakers`}>
+        Conoce a los speakers
       </LinkButton>
     </div>
   );

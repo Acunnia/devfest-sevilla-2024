@@ -82,3 +82,25 @@
   align-items: center;
   justify-content: center;
 }
+
+.speakers {
+  height: 56px;
+  margin-top: var(--space-4x);
+  border-radius: var(--space-2x);
+  border: 1px solid var(--brand-yellow);
+  background: var(--brand-yellow);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--text-md);
+  letter-spacing: -0.02em;
+  outline: none;
+  color: black;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speakers:hover {
+  background: #ffc933;
+}

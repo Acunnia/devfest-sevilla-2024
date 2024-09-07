@@ -31,7 +31,7 @@ type Props = {
 
 export default function Speakers({ speakers }: Props) {
   const meta = {
-    title: 'Speakers - Virtual Event Starter Kit',
+    title: 'Speakers - DevFest Sevilla 2024',
     description: META_DESCRIPTION
   };
   return (
