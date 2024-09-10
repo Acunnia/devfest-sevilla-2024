@@ -48,7 +48,6 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
         <meta property="og:url" content={url} />
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
-        <link rel="canonical" href='https://devfest24.gdgsevilla.com/' />
         <meta name="twitter:site" content={`@${TWITTER_USER_NAME}`} />
         <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
