@@ -60,9 +60,11 @@ export default function SpeakerSection({ speaker }: Props) {
             title={speaker.name}
             src={speaker.image}
             className={styles.image}
+            layout='responsive'
             loading="lazy"
             height={400}
             width={300}
+            objectFit="contain"
           />
         </div>
         <div className={styles['speaker-details']}>
