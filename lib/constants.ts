@@ -41,12 +41,8 @@ export const REPO = 'https://github.com/vercel/virtual-event-starter-kit';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Call for Speakers',
-    route: 'https://sessionize.com/devfest-sevilla-2024/'
-  },
-  {
-    name: 'Voluntarios',
-    route: 'https://forms.gle/AxHqWYRAZw6Xaruj9'
+    name: 'Ponentes',
+    route: '/speakers'
   },
   {
     name: 'Equipo',
