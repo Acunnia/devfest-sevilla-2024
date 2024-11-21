@@ -20,6 +20,37 @@ import cn from 'classnames';
 import { Sponsor } from '@lib/types';
 import styles from './sponsors-grid.module.css';
 
+function SponsorMini({ sponsor }: { sponsor: Sponsor }) {
+
+  return (
+    <Link
+      key={sponsor.name}
+      href={sponsor.callToActionLink}
+      role="button"
+      tabIndex={0}
+      className={cn(styles.cardmini, {
+        [styles.diamond]: sponsor.tier === 'diamond',
+        [styles.gold]: sponsor.tier === 'gold'
+      })}
+    >
+      <div className={styles.imageWrapper}>
+        <Image
+          alt={sponsor.name}
+          src={sponsor.cardImage}
+          className={cn(styles.image, {
+            [styles.silver]: sponsor.tier === 'silver'
+          })}
+          loading="lazy"
+          title={sponsor.name}
+          width={200}
+          height={200}
+        />
+      </div>
+    </Link>
+  );
+}
+
+
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
 
   return (
@@ -106,7 +137,7 @@ export default function SponsorsGrid({ sponsors }: Props) {
       <div className={styles.grid}>
         <h2 className={styles.textTier}>Foodie Partners</h2>
         {foodieSponsors.map(sponsor => (
-          <SponsorCard key={sponsor.name} sponsor={sponsor} />
+          <SponsorMini key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>
     </>
