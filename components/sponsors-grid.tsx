@@ -134,7 +134,7 @@ export default function SponsorsGrid({ sponsors }: Props) {
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>
-      <div className={styles.grid}>
+      <div className={styles.gridmini}>
         <h2 className={styles.textTier}>Foodie Partners</h2>
         {foodieSponsors.map(sponsor => (
           <SponsorMini key={sponsor.name} sponsor={sponsor} />
